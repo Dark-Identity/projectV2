@@ -2,7 +2,7 @@ const express = require("express");
 const path = require('path');
 const hbs = require('hbs');
 const parser = require('body-parser');
-const jssha = require('jssha');
+const jssha = require('jsSHA');
 
 const port = process.env.PORT || 2000;
 
