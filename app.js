@@ -77,14 +77,12 @@ request.post({
 if (httpRes.statusCode === 200) {
 
  console.log("hey the payment was successfull");
- // console.log(body , body.Amount);
- res.render("success");
 
  } else if (httpRes.statusCode >= 300 &&
  httpRes.statusCode <= 400) {
 
+  res.redirect(httpRes.headers.location.toString());
   console.log("something went wrong");
-  res.render("failure")
 
  }
  })
