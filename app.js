@@ -89,6 +89,12 @@ if (httpRes.statusCode === 200) {
 
 });
 
+app.post("/success" , (req,res)=>{
+  res.render("success");
+});
+app.post("/failure" , (req,res)=>{
+  res.render("failure");
+});
 app.listen(port , ()=>{
   console.log(`started server at ${port}`);
 })
