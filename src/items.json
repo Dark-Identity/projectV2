@@ -1,0 +1,10 @@
+{
+	"sample_data" 	: {
+						"amount" : "00",
+						"currency": "INR",
+						"name"	  : "00",
+						"email_id" : "00",
+						"contact_number" : "00",
+						"txnid" : "00"
+					   }
+}
