@@ -719,8 +719,8 @@ let user_information;
 get_user_data();
 get_bet_history();
 get_all_members();
-// get_live_bets();
-// get_virtual_bets();
+get_live_bets();
+get_virtual_bets();
 get_payment();
 
 
