@@ -71,9 +71,6 @@ body{
   background: white;
   box-shadow: 0 0 5px black;
 }
-#spinner{
-  backdrop-filter: blur(7px)  
-}
 
 #logo{
   height: 55px;
@@ -2292,7 +2289,7 @@ ol, li {
 /* mobile media querry */
  .slider{
    width: 100vw;
-   height: 16rem;
+   height: 14rem;
  }
   .main-section{
     display: block;
