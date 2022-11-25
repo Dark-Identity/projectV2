@@ -71,6 +71,9 @@ body{
   background: white;
   box-shadow: 0 0 5px black;
 }
+#spinner{
+  backdrop-filter: blur(7px)  
+}
 
 #logo{
   height: 55px;
