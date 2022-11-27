@@ -944,6 +944,7 @@ input[type=file]::file-selector-button{
   position: absolute;;
   bottom : 3rem;
   padding : 1rem 0;
+  padding-bottom : 60px;
   width: 100%;
   background: transparent;
 }
