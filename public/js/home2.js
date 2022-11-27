@@ -1279,7 +1279,7 @@ let body = `<h3>${data['league']}</h3>
     <span>
       <h4>AMOUNT</h4>
       <h5>${data['bAmmount']}</h5>
-      <h6 class="lime">${ (parseFloat(data['bAmmount'])/100) * parseFloat(data['profit']) }</h6>
+      <h6 class="lime">${ ((parseFloat(data['bAmmount'])/100) * parseFloat(data['profit'])).toFixed(2) }</h6>
     </span>
   </div>`;
 
@@ -1352,7 +1352,7 @@ function create_unsettled_bets(data){
       <span>
         <h4>AMOUNT</h4>
         <h5>${data['bAmmount']}</h5>
-        <h6 class="lime">${ (parseFloat(data['bAmmount'])/100) * parseFloat(data['profit']) }</h6>
+        <h6 class="lime">${ ((parseFloat(data['bAmmount'])/100) * parseFloat(data['profit'])).toFixed(2) }</h6>
       </span>
     </div>
     ${cut_box}
