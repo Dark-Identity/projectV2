@@ -590,8 +590,8 @@ async function check_date(date , time ){
   let valid_hour = (hours_now < m_hours);
   let valid_minutes = ( minutes_now < m_minutes );
   let equal_hours = (hours_now === m_hours);
-  // console.log(m_date , today.getDate(), m_hours , hours_now , minutes_now , m_minutes);
-  // console.log(valid_date , valid_hour , valid_minutes , equal_hours);
+  console.log(m_date , today.getDate(), m_hours , hours_now , minutes_now , m_minutes);
+   console.log(valid_date , valid_hour , valid_minutes , equal_hours);
   if(valid_date && valid_hour || valid_date && equal_hours && valid_minutes){
     return true;
   }
