@@ -1098,8 +1098,8 @@ function listen_to_cancel_bet() {
           let parsed_response = await res.json();
 
           if(parsed_response['status'] == 1){
-            alert('bet was deleted')
-              // window.location.href = window.location.origin + '/home';
+            alert('BET DELETED !!!')
+              window.location.href = window.location.origin + '/home';
           }else if(parsed_response['status'] == 2){
             alert('Bet cannot be deleted now . ');
             window.location.reload();
@@ -1292,7 +1292,11 @@ let body = `<h3>${data['league']}</h3>
 
 function check_date(date , time ){
 
-  let today = new Date();
+  const nDate = new Date().toLocaleString('en-US', {
+  timeZone: 'Asia/Calcutta'
+  });
+  let today = new Date(nDate);
+
   let match_date = date.split(/\//);
   let m_time = time.split(/\:/);
   let m_date = parseInt(match_date[0]);
@@ -1315,15 +1319,15 @@ function check_date(date , time ){
   // console.log(hours_now , m_hours , minutes_now , m_minutes);
   let to_return = '';
 
-  // if(valid_date && valid_hour || equal_hours && valid_minutes){
+  if(valid_date && valid_hour || equal_hours && valid_minutes){
     to_return = `<div class="trade_cancel_btn">
       <i class="fa-solid fa-angles-up"></i>
       <h3>CANCEL</h3>
       </div>`;
     return to_return;
-  // }
+  }
 
-  // return to_return;
+  return to_return;
 
 }
 
