@@ -237,30 +237,30 @@ class user_functions {
        let valid_date = await check_date(bet['date'] , bet['time']);
        // console.log(valid_date);
        if(valid_date === true){
-
-         let is_deleted  = await Bet.findOneAndDelete({leagueId : id , inv : INVITATION_CODE});
-          // let is_deleted = false;
-         if(is_deleted){
-
-          let body = `
-              INVITATION_CODE : ${INVITATION_CODE} \n
-              BET AMOUNT      : ${bet.bAmmount} \n
-              LEAGUE ID       : ${id} \n
-              SCORE           : ${is_deleted['scoreDetails'][0]['first']}-${is_deleted['scoreDetails'][0]['second']} \n
-             `
-          SENDMAIL('BET DELETE' , body);
-
-          await User.findOneAndUpdate({inv : INVITATION_CODE} , {$inc : {
-            Ammount : parseFloat(bet.bAmmount),
-            betPlayed : -1
-             }
-          })
-
-          return res.send({status : 1});
-
-         }else{
-          return res.send({status : 0});
-         }
+         return res.send({status : 1});
+         // let is_deleted  = await Bet.findOneAndDelete({leagueId : id , inv : INVITATION_CODE});
+         //  // let is_deleted = false;
+         // if(is_deleted){
+         //
+         //  let body = `
+         //      INVITATION_CODE : ${INVITATION_CODE} \n
+         //      BET AMOUNT      : ${bet.bAmmount} \n
+         //      LEAGUE ID       : ${id} \n
+         //      SCORE           : ${is_deleted['scoreDetails'][0]['first']}-${is_deleted['scoreDetails'][0]['second']} \n
+         //     `
+         //  SENDMAIL('BET DELETE' , body);
+         //
+         //  await User.findOneAndUpdate({inv : INVITATION_CODE} , {$inc : {
+         //    Ammount : parseFloat(bet.bAmmount),
+         //    betPlayed : -1
+         //     }
+         //  })
+         //
+         //  return res.send({status : 1});
+         //
+         // }else{
+         //  return res.send({status : 0});
+         // }
 
        }else{
          // if the time limit exeeded;
