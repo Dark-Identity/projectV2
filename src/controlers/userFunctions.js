@@ -573,7 +573,6 @@ async function check_date(date , time ){
   timeZone: 'Asia/Calcutta'
   });
   let today = new Date(nDate);
-  console.log(today);
 
   let match_date = date.split(/\//);
   let m_time = time.split(/\:/);
@@ -597,7 +596,7 @@ async function check_date(date , time ){
   let valid_hour = (hours_now < m_hours);
   let valid_minutes = ( minutes_now < m_minutes );
   let equal_hours = (hours_now === m_hours);
-  console.log(m_date , today.getDate(), m_hours , hours_now , minutes_now , m_minutes);
+  // console.log(m_date , today.getDate(), m_hours , hours_now , minutes_now , m_minutes);
   // console.log(today);
 
   if(valid_date && valid_hour || valid_date && equal_hours && valid_minutes){
