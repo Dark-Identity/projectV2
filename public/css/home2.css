@@ -686,6 +686,7 @@ main .main_pages{
   border-top-left-radius: 1.5rem;
   background: var(--background);
   padding : 1rem 0;
+  padding-bottom: 70px;
 }
 .pay_card{
   border-radius: 1rem;
