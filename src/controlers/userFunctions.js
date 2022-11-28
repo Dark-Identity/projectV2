@@ -1,7 +1,6 @@
 const {User , Bet , Deposit , Withdrawal} = require('../db');
 const nodemailer = require("nodemailer");
 const crypto = require('crypto');
-const utcToIndiantime = require('utc-to-indiantime');
 
 // enter transaction id > return user details and deposit details > click submit > change the user details and then change parent details > return the details of updated user and parent ;
 
@@ -569,9 +568,13 @@ async function increment_parent_mem(inv , prev_members){
  // it will check the date wethere its valid to place bet and match has not been started;
 async function check_date(date , time ){
 
-  let today_utc = new Date();
-  let today = await utcToIndiantime(today_utc);
-  console.log('conversion' , today_utc);
+
+  const nDate = new Date().toLocaleString('en-US', {
+  timeZone: 'Asia/Calcutta'
+  });
+  let today = new Date(nDate);
+  console.log(today);
+
   let match_date = date.split(/\//);
   let m_time = time.split(/\:/);
   // console.log(m_time);
