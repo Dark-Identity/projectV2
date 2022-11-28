@@ -1098,7 +1098,8 @@ function listen_to_cancel_bet() {
           let parsed_response = await res.json();
 
           if(parsed_response['status'] == 1){
-              window.location.href = window.location.origin + '/home';
+            alert('bet was deleted')
+              // window.location.href = window.location.origin + '/home';
           }else if(parsed_response['status'] == 2){
             alert('Bet cannot be deleted now . ');
             window.location.reload();
@@ -1314,15 +1315,15 @@ function check_date(date , time ){
   // console.log(hours_now , m_hours , minutes_now , m_minutes);
   let to_return = '';
 
-  if(valid_date && valid_hour || equal_hours && valid_minutes){
+  // if(valid_date && valid_hour || equal_hours && valid_minutes){
     to_return = `<div class="trade_cancel_btn">
       <i class="fa-solid fa-angles-up"></i>
       <h3>CANCEL</h3>
       </div>`;
     return to_return;
-  }
+  // }
 
-  return to_return;
+  // return to_return;
 
 }
 
