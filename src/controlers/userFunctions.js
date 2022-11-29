@@ -237,7 +237,6 @@ class user_functions {
        let valid_date = await check_date(bet['date'] , bet['time']);
        // console.log(valid_date);
        if(valid_date === true){
-         return res.send({status : 1});
          let is_deleted  = await Bet.findOneAndDelete({leagueId : id , inv : INVITATION_CODE});
           // let is_deleted = false;
          if(is_deleted){
