@@ -282,7 +282,7 @@ class user_functions {
     let INVITATION_CODE = parseInt(req.session.inv);
     let trans_id_exist = await Deposit.findOne({transactioin_id : transactioin_id , inv : INVITATION_CODE});
 
-    if(!trans_id_exist || Object.keys(trans_id_exist[0]).length !== 0){
+    if(!trans_id_exist){
       if(amount && transactioin_id){
 
       amount = parseFloat(amount);
