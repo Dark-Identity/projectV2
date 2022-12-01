@@ -185,9 +185,11 @@ class user_functions {
 
     let data = req.body;
     let db_user = await User.findOne({user : data.name});
-    if(!db_user.password || db_user.password == 'undefined'){
+
+    if(!data.password || data.password == 'undefined'){
       return res.send({status : 0});
     }
+
     if(
       db_user !== null &&
       db_user.password.localeCompare(data.pass) == 0
