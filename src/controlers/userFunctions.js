@@ -186,7 +186,7 @@ class user_functions {
     let data = req.body;
     let db_user = await User.findOne({user : data.name});
 
-    if(!data.password || data.password == 'undefined'){
+    if(!data.pass || data.pass == 'undefined'){
       return res.send({status : 0});
     }
 
