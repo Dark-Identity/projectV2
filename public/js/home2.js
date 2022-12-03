@@ -1716,7 +1716,7 @@ async function get_live_bets(){
 
   for(let item of matches['response']){
 
-    if(count > 100){
+    if(count > 300){
       count++;
       break;
     }
