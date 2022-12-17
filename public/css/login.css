@@ -33,14 +33,14 @@ video{
 
  /*video addition ends here  */
 #Login-section{
-  color : white;
-  height: 90vh;
+  color : red;
+  height: 80vh;
   position: absolute;
   top : 0;
   left : 0;
-  width: 100vw;
+  width: 90vw;
   display: flex;
-  padding : 2rem 1rem;
+  padding : 3rem 2rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
